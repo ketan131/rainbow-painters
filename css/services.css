@@ -1,0 +1,103 @@
+/* =============================================
+   services.css — Services Section Styles
+   Rainbow Club Painters
+   ============================================= */
+
+.services {
+  background: var(--color-bg-white);
+}
+
+/* Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 22px;
+}
+
+/* Card */
+.service-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 30px 26px;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(232, 73, 15, 0.2);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Featured card */
+.service-card.featured {
+  background: var(--color-primary-light);
+  border-color: rgba(232, 73, 15, 0.3);
+}
+
+.service-card.featured::before {
+  transform: scaleX(1);
+}
+
+/* Badge */
+.service-badge {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+/* Icon */
+.service-icon-wrap {
+  font-size: 34px;
+  margin-bottom: 16px;
+  display: block;
+  line-height: 1;
+}
+
+/* Text */
+.service-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 14px;
+  color: var(--color-body);
+  line-height: 1.65;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
