@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `Message: ${message || 'No message'}`;
 
       // Test number - baad mein Shahjad ka number daalna: 919220342096
-      const ownerNumber = '919012117930';
+      const ownerNumber = '919220342096';
 
       window.open(`https://wa.me/${ownerNumber}?text=${whatsappMessage}`, '_blank');
 
