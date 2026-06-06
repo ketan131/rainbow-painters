@@ -127,8 +127,9 @@ ul {
   border: 2px solid transparent;
   transition: all var(--transition);
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
 }
-
 .btn-primary {
   background: var(--color-primary);
   color: #fff;
