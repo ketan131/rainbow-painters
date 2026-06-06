@@ -116,5 +116,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 5000);
     });
   }
+  /* ---- Shine effect on button click ---- */
+document.querySelectorAll('.btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    this.classList.remove('shine-active');
+    void this.offsetWidth;
+    this.classList.add('shine-active');
+    setTimeout(() => {
+      this.classList.remove('shine-active');
+    }, 700);
+  });
+});
 
 });

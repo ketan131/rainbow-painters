@@ -252,3 +252,30 @@ ul {
     margin-bottom: 40px;
   }
 }
+/* Page load shine effect */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.05) 40%,
+    rgba(255,255,255,0.20) 50%,
+    rgba(255,255,255,0.05) 60%,
+    transparent 100%
+  );
+  transform: skewX(-15deg);
+  animation: heroShine 1.8s ease forwards;
+  animation-delay: 0.5s;
+  z-index: 3;
+  pointer-events: none;
+}
+
+@keyframes heroShine {
+  0%   { left: -100%; }
+  100% { left: 150%; }
+}
