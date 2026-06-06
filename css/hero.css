@@ -171,7 +171,7 @@
     transparent 100%
   );
   transform: skewX(-15deg);
-  animation: heroShine 1.8s ease forwards;
+  animation: heroShine 1.8s ease infinite;
   animation-delay: 0.5s;
   z-index: 3;
   pointer-events: none;
