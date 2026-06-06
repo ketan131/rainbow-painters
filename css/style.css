@@ -160,29 +160,39 @@ ul {
 }
 
 /* --- Floating Call Button --- */
-.float-call {
+/* --- Floating Buttons --- */
+.float-call,
+.float-whatsapp {
   position: fixed;
-  bottom: 28px;
   right: 28px;
   z-index: 999;
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: var(--color-primary);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 26px;
-  box-shadow: 0 6px 20px rgba(232, 73, 15, 0.45);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.float-call:hover {
-  transform: scale(1.12);
-  box-shadow: 0 8px 28px rgba(232, 73, 15, 0.55);
+.float-call {
+  bottom: 28px;
+  background: var(--color-primary);
+  box-shadow: 0 6px 20px rgba(232, 73, 15, 0.45);
 }
 
+.float-whatsapp {
+  bottom: 100px;
+  background: #25D366;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+}
+
+.float-call:hover,
+.float-whatsapp:hover {
+  transform: scale(1.12);
+}
 /* --- Footer --- */
 .footer {
   background: var(--color-dark);
